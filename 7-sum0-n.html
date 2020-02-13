@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sum of numbers from 0 to N
+    </title>
+</head>
+
+<body>
+    <h1>Sum of numbers from 0 to N</h1>
+    <p>We want to generate a function that computes the series starting from 0 and ending until the given number.
+    </p>
+    <ol>Example:
+        <li>input: > 6 <br>
+            Output: 0+1+2+3+4+5+6 = 21
+        </li>
+        <li>input: > -15 <br>
+            Output: -15 < 0 
+        </li> 
+        <li>input: > 0 <br>
+            Output: 0=0
+        </li>
+    </ol>
+
+    <script>
+        var count = -15;
+
+        let sum = 0;
+        let SequenceSum = "";
+        if (count === 0) {
+            console.log("SequenceSum = 0=0");
+        }else if (count < 0) {
+            console.log(count + "<0");
+        }
+
+        for (var i = 0; i <= count; i++) {
+            
+            sum += i;
+            if ( i === count) {
+                SequenceSum = SequenceSum + i + " = " + sum;
+            } else {
+                SequenceSum = SequenceSum + i + "+";
+            }
+
+        } 
+        console.log("SequenceSum: ", SequenceSum);
+       
+    </script>
+</body>
+
+</html>
