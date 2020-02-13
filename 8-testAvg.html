@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test Averages</title>
+</head>
+
+<body>
+    <h3>There was a test in your class and you passed it. Congratulations!
+        <br>
+        But you're an ambitious person. You want to know if you're better than the average student in your class.
+        <br>
+        You receive an array with your peers' test scores. Now calculate the average and compare your score!
+        <br>
+        Return True if you're better, else False!
+        <br>
+        Note:
+        <br>
+        Your points are not included in the array of your class's points. For calculating the average point you may add
+        your point to the given array!</h3>
+    
+    <script>
+        let classPoints = [48, 75, 83, 99, 100, 64, 81]; //550 + 85 =635 / 8 = 79.375
+        const yourPoints = 85;
+        let totalArr = 0;
+        
+        classPoints.push(yourPoints);
+        console.log(classPoints);
+
+        for (let i = 0; i < classPoints.length; i++) {
+            totalArr += classPoints[i];
+            console.log("totalArr: ", totalArr);
+        }
+
+        let avg = totalArr / classPoints.length;
+
+        console.log("avg: ", avg);
+
+        if (yourPoints > avg) {
+            console.log("True you are above average");
+        } else {
+            console.log("False you are average or below");
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Avengers Clerk</title>
+</head>
+
+<body>
+    <h1>Avengers Clerk</h1>
+    <p>The new "Avengers" movie has just been released! There are a lot of people at the cinema box office standing in a
+        huge line. Each of them has a single 100, 50 or 25 dollar bill. An "Avengers" ticket costs 25 dollars.</p>
+    <p>Vasya is currently working as a clerk. He wants to sell a ticket to every single person in this line.</p>
+    <p>Can Vasya sell a ticket to every person and give change if he initially has no money and sells the tickets
+        strictly in the order people queue?</p>
+    <p>Return YES, if Vasya can sell a ticket to every person and give change with the bills he has at hand at that
+        moment. Otherwise return NO.</p>
+
+    <ul>Examples:
+        <li>
+            tickets([25, 25, 50]) // => YES
+        </li>
+        <li>
+            tickets([25, 100]) // => NO. Vasya will not have enough money to give change to 100 dollars
+        </li>
+        <li>
+            tickets([25, 25, 50, 50, 100]) // => NO. Vasya will not have the right bills to give 75 dollars of change
+            (you can't make two bills of 25 from one of 50)
+        </li>
+    </ul>
+<script>
+    // let peopleInLine = [25, 100];
+    // let peopleInLine = [25, 25, 50, 50];
+    let peopleInLine = [25,50,25,100,25,25,25,100,25,50,25,100,25,50,25,100,25,25,50,100]; //yes
+    // let peopleInLine = [25,50,25,100,25,50,25,100,25,25,50,100,25,25,50,100,50,50]; //no
+    // let peopleInLine = [25,25,50,100,25,50,25,100,25,25,25,100,100,100]; //no
+
+    tickets();
+
+    function tickets(){
+    let num25 = 0;
+    let num50 = 0;
+    let num100 = 0;
+
+
+    for (var i = 0; i < peopleInLine.length; i++) { 
+
+        if (peopleInLine[i] === 25) {
+            num25++;
+        }
+        if (peopleInLine[i] === 50) {
+            if (num25 >= 1) {
+                num50++;
+                num25--;
+            } else {
+                console.log('NO');
+                return'NO';
+            }
+        }
+        if (peopleInLine[i] === 100) {
+            num100++;
+
+            if (num50 >= 1 && num25 >= 1)  {
+                num50--;
+                num25--;
+            }
+            else if (num25 >= 3) {
+                num25-=3;
+            } else {
+                console.log('NO');
+                return 'NO';
+            }
+        }
+    }
+    console.log('YES');
+    return 'YES';
+}
+
+</script>
+</body>
+</html>
