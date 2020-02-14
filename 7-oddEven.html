@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Odd or Even?
+    </title>
+</head>
+<body>
+    <h1>Odd or Even?</h1>
+    <p>Given a list of numbers, determine whether the sum of its elements is odd or even.
+        <br>
+        Give your answer as a string matching "odd" or "even".
+        <br>
+        If the input array is empty consider it as: [0] (array with a zero).</p>
+    <ol>Example:
+        <li>odd_or_even([0])          ==  "even"</li>
+        <li>odd_or_even([0, 1, 4])    ==  "odd"</li>
+        <li>odd_or_even([0, -1, -5])  ==  "even"</li>
+    </ol>
+
+    <script>
+    const array = [0, -1, -5];
+    let count = 0;
+    
+    for (var i = 0; i < array.length; i++) {
+        count += array[i];
+    }
+    if (count % 2 == 0) {
+            console.log("even");
+        } else {
+            console.log("odd");
+        }
+    
+    </script>
+</body>
+</html>
