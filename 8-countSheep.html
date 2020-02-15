@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Count Sheep!</title>
+</head>
+<body>
+
+    <h1>If you can't sleep, just count sheep!!</h1>
+    <ul>Task:
+        <li>Given a non-negative integer, 3 for example, return a string with a murmur:</li>
+        <li>"1 sheep...2 sheep...3 sheep...".</li>
+        <li> will always be valid, i.e. no negative integers.</li>
+    </ul>
+
+    <script>
+    const num = 3;
+    let string = "";
+
+    for (var i = 1; i <= num; i++) {
+        string += i + " sheep...";
+    }
+    console.log("string: ", string);
+    
+    </script>
+</body>
+</html>
