@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testing 1-2-3</title>
+</head>
+<body>
+    <h1>Testing 1-2-3</h1>
+    <p>Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.</p>
+    <p>Write a function which takes a list of strings and returns each line prepended by the correct number.</p>
+    <p>he numbering starts at 1. The format is n: string. Notice the colon and space in between.</p>
+    <ul>Examples:
+        <li>number([]) // => []</li>
+        <li>number(["a", "b", "c"]) // => ["1: a", "2: b", "3: c"]</li>
+    </ul>
+
+    <script>
+    var array = ["a", "b", "c"];
+    var stringArray = [];
+
+    if (array === []){
+            console.log("[]");
+        } 
+
+    for (var i = 0; i < array.length; i++) {
+ 
+        stringArray.push(i + 1 + ": " + array[i])
+           
+    }
+    console.log(stringArray); 
+    
+    </script>
+</body>
+</html>
